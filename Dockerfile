@@ -5,9 +5,9 @@ RUN apk update \
 && curl -sL "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -xvz \
 && ls \
 && chmod 0755 cf \
-&& cp -var cf /bin/sh \
-&& ls -ltrh /bin/sh/cf \
-&& /bin/sh/cf version
+&& cp -var cf /usr/bin \
+&& ls -ltrh /usr/bin/cf \
+&& /usr/bin/cf version
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
