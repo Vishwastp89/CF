@@ -1,11 +1,11 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk update
-RUN apk add curl
+WORKDIR /
+RUN apt-get update
 RUN curl -sL "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -xvz
-RUN pwd
-RUN chmod 0755 cf
+RUN cp /cf /usr/bin/cf
+RUN cp /cf8 /usr/bin/cf8
+RUN chmod +x entrypoint.sh
 RUN cf version
 ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
