@@ -6,7 +6,7 @@ RUN apk update \
 && ls \
 && chmod 0755 cf \
 && cp -var cf /bin/sh \
-&& ls -ltrh /bin/sh/cf
+&& ls -ltrh /bin/sh/cf \
 && /bin/sh/cf version
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
