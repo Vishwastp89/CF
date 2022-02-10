@@ -7,19 +7,19 @@ inputs:
   appdir:
     description: Set this parameter if you want to switch the working dir to push an app
     required: true
-  api:
+  CF_API:
     description: The Cloud Foundry API endpoint
     required: true
-  username:
+  CF_USERNAME:
     description: Your Cloud Foundry authentication username (or email address)
     required: true
-  password:
+  CF_PASSWORD:
     description: Your Cloud Foundry authentication password
     required: true
-  org:
+  CF_ORG:
     description: The name of the Cloud Foundry organization in which to deploy
     required: true
-  space:
+  CF_SPACE:
     description: The name of the Cloud Foundry space in which to deploy
     required: true
   validate:
