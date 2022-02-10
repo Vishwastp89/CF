@@ -10,5 +10,5 @@ RUN apt-get update \
 && curl -o /usr/share/bash-completion/completions/cf8 https://raw.githubusercontent.com/cloudfoundry/cli-ci/master/ci/installers/completion/cf8 \
 && cf version
 ADD entrypoint.sh /entrypoint.sh
-chmod +x /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
