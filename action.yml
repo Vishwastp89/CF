@@ -30,9 +30,13 @@ inputs:
     description: Debug your deploy dir to list all folders
     required: false
     default: false
-
+  command:
+    description: "Command to run using CF CLI"
+    required: true
 
 
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - ${{ inputs.command }}
