@@ -7,4 +7,4 @@ if [ -n "$INPUT_CF_ORG" ] && [ -n "$INPUT_CF_SPACE" ]; then
   cf target -o "$INPUT_CF_ORG" -s "$INPUT_CF_SPACE"
 fi
 
-sh -c "cf push vis_app -f ${INPUT_MANIFEST} -b https://github.com/cloudfoundry/java-buildpack"
+sh -c "cf push vis_app -f ${INPUT_MANIFEST}"
