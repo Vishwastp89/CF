@@ -3,10 +3,11 @@ FROM ubuntu:latest
 WORKDIR /
 RUN apt-get update \
 && apt-get install -y curl \
-&& apt-get install -y tar
+&& apt-get install -y wget
 #RUN curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" \
-COPY cf8-cli_8.1.0_linux_x86-64.tgz /cf8-cli_8.1.0_linux_x86-64.tgz
-RUN ls -ltrh / \
+RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+RUN ls -ltrh \
 && tar -xvzf /cf8-cli_8.1.0_linux_x86-64.tgz \
 && mv /cf8 /usr/local/bin \
 && mv /cf /usr/local/bin \
