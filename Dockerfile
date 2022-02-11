@@ -4,8 +4,9 @@ WORKDIR /
 RUN apt-get update \
 && apt-get install -y apt-utils  \
 && apt-get install -y curl \
-&& apt-get install -y tar \
-&& curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -zx \
+&& apt-get install -y tar
+RUN curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -zx \
+&& ls -ltrh / \
 && mv /cf8 /usr/local/bin \
 && mv /cf /usr/local/bin \
 && ls -ltrh /usr/local/bin \
