@@ -2,7 +2,6 @@ FROM ubuntu:latest
 
 WORKDIR /
 RUN apt-get update \
-&& apt-get install -y apt-utils  \
 && apt-get install -y curl \
 && apt-get install -y tar
 #RUN curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" \
