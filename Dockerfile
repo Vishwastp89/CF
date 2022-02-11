@@ -8,7 +8,7 @@ RUN apt-get update \
 #RUN curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" \
 ADD cf8-cli_8.1.0_linux_x86-64.tgz /cf8-cli_8.1.0_linux_x86-64.tgz
 RUN ls -ltrh / \
-&& tar -xvz /cf8-cli_8.1.0_linux_x86-64.tgz \
+&& tar -xvzf /cf8-cli_8.1.0_linux_x86-64.tgz \
 && mv /cf8 /usr/local/bin \
 && mv /cf /usr/local/bin \
 && ls -ltrh /usr/local/bin \
