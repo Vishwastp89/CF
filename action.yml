@@ -1,4 +1,4 @@
-name: 'CF Push'
+name: 'CF Push cli8'
 description: Push an application to a Cloud Foundry
 inputs:
   manifest:
