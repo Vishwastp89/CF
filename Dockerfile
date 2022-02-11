@@ -1,8 +1,10 @@
 FROM ubuntu:latest
 
 WORKDIR /
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
+RUN apt-get update \
+&& apt-get install -y apt-utils  \
 && apt-get install -y curl \
+&& apt-get install -y tar \
 && curl -sL "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -xvz \
 && mv /cf8 /usr/local/bin \
 && mv /cf /usr/local/bin \
