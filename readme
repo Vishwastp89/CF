@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy to CF
-        uses: Vishwastp89/CF@main
+        uses: Vishwastp89/CF@latest
         with:
           CF_API: ${{ secrets.CF_API }}
           CF_USERNAME: ${{ secrets.CF_USERNAME }}
