@@ -10,16 +10,16 @@ inputs:
   API:
     description: The Cloud Foundry API endpoint
     required: true
-  CF_USERNAME:
+  USERNAME:
     description: Your Cloud Foundry authentication username (or email address)
     required: true
-  CF_PASSWORD:
+  PASSWORD:
     description: Your Cloud Foundry authentication password
     required: true
-  CF_ORG:
+  ORG:
     description: The name of the Cloud Foundry organization in which to deploy
     required: true
-  CF_SPACE:
+  SPACE:
     description: The name of the Cloud Foundry space in which to deploy
     required: true
   validate:
